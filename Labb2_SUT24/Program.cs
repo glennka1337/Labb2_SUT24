@@ -7,21 +7,47 @@
             Console.OutputEncoding = System.Text.Encoding.UTF8;
             Console.Write("Mata in en siffra: ");
             int userInput = Int32.Parse(Console.ReadLine());
-            
+
             ChessSize(userInput);
         }
 
         public static void ChessSize(int xy)
         {
-            for (int i = 1; i <= xy; i++)
+            for (int j = 1; j <= xy; j++)
             {
-                if (i % 2 == 0)
+                if (j % 2 == 0)
                 {
-                    Console.Write("1");
+
+
+                    for (int i = 1; i <= xy; i++)
+                    {
+                        if (i % 2 == 0)
+                        {
+                            Console.Write("◻︎");
+                        }
+                        else
+                        {
+                            Console.Write("◼︎");
+                        }
+                    }
+                    Console.WriteLine();
                 }
                 else
                 {
-                    Console.Write("0");
+
+
+                    for (int i = 1; i <= xy; i++)
+                    {
+                        if (i % 2 == 0)
+                        {
+                            Console.Write("◼︎");
+                        }
+                        else
+                        {
+                            Console.Write("◻︎");
+                        }
+                    }
+                    Console.WriteLine();
                 }
             }
         }
